@@ -34,13 +34,12 @@ for filename in tqdm(files):
                 first_name = sender.split(' ')[0]
                 content = message['content']
                 
-                if year < '2021':
-                    with open(folder+first_name+'.txt','a') as txt_file:
-                        txt_file.write(content+' ')
+                with open(folder+first_name+'.txt','a') as txt_file:
+                    txt_file.write(content+' ')
                     
-                    with open(folder+'output.csv', 'a') as csv_file:
-                        writer = csv.writer(csv_file)
-                        writer.writerow([date,week,month,year,time,first_name])
+                with open(folder+'output.csv', 'a') as csv_file:
+                    writer = csv.writer(csv_file)
+                    writer.writerow([date,week,month,year,time,first_name])
 
             except KeyError:
                 pass
