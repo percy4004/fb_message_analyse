@@ -5,16 +5,16 @@ import csv
 import datetime as dp
 from datetime import datetime, timedelta
 
-folder = './group_name/'
+folder = './Messenger_Group_1/' #Replace with your folder name
 
-files = os.listdir(folder+'data')
+files = os.listdir(folder+'data') #'data' folder contains message JSON files
 
 if '.DS_Store' in files:
     files.remove('.DS_Store')
 
 with open(folder+'output.csv', 'a') as csv_file:
     writer = csv.writer(csv_file)
-    writer.writerow(['Month/Year','Month','Year','Week','Date','Time','Sender'])
+    writer.writerow(['Date','Week','Month','Year','Time','Sender'])
 
 for filename in tqdm(files):
     if filename.startswith('message'):
