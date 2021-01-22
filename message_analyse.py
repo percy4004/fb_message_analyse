@@ -5,7 +5,7 @@ import csv
 import datetime as dp
 from datetime import datetime, timedelta
 
-folder = './tanya/'
+folder = './group_name/'
 
 files = os.listdir(folder+'data')
 
