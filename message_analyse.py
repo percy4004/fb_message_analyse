@@ -40,7 +40,7 @@ for filename in tqdm(files):
                     
                     with open(folder+'output.csv', 'a') as csv_file:
                         writer = csv.writer(csv_file)
-                        writer.writerow([month+' '+year,month,year,week,date,time,first_name])
+                        writer.writerow([date,week,month,year,time,first_name])
 
             except KeyError:
                 pass
